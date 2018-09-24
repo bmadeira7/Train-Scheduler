@@ -1,0 +1,36 @@
+.jumbotron {
+    height: 200px;
+}
+.jumbotronHeader {
+    text-align: center;
+    
+}
+
+.jumboP {
+    text-align: center;
+
+}
+.display-4 {
+    font-size: 3.5rem;
+    font-weight: 300;
+    line-height: 0.7;
+}
+p {
+    margin-top: 21px;
+    margin-bottom: 0rem;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
