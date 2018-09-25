@@ -17,7 +17,7 @@
         <div class="row">
             <div class="col">
 
-                <div class="jumbotron jumbotron-fluid">
+                <div class="jumbotron jumbotron-fluid text-light bg-dark">
                     <div class="container">
                         <h1 class="display-4 jumbotronHeader">It's hard to stop a Train</h1>
                         <p class="lead jumboP">We're always on the right track! ©</p>
@@ -31,11 +31,11 @@
         <div class="row">
             <div class="col">
                 <div class="card">
-                    <div class="card-header">
+                    <div class="card-header text-light bg-dark">
                         Current Train Schedule
                     </div>
                     <div class="card-body">
-                        <table>
+                        <table class="table table-hover">
                             <tr>
                                 <th>Train Name</th>
                                 <th>Destination</th>
@@ -94,20 +94,30 @@
         </div>
         <div class="row">
             <div class="col">
-                <div class="card">
-                    <div class="card-header">
+                <div class="card addTrainCard">
+                    <div class="card-header text-light bg-dark">
                         Add Train
                     </div>
                     <div class="card-body">
                         <form>
                             <div class="form-group">
-                                <label for="formGroupExampleInput">Example label</label>
-                                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+                                <label for="formGroupExampleInput">Train Name</label>
+                                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
                             </div>
                             <div class="form-group">
-                                <label for="formGroupExampleInput2">Another label</label>
-                                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+                                <label for="formGroupExampleInput2">Destination</label>
+                                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="">
                             </div>
+                            <div class="form-group">
+                                <label for="formGroupExampleInput">First Train Time (HH:mm - military time)</label>
+                                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+                            </div>
+                            <div class="form-group">
+                                <label for="formGroupExampleInput2">Frequency (min)</label>
+                                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="">
+                            </div>
+                        </form>
+                        <button type="submit" class="btn text-light bg-dark">Submit</button>
                         </form>
                     </div>
                 </div>
