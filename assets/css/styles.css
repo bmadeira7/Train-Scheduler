@@ -1,5 +1,6 @@
 body {
-background-color: rgb(255, 190, 92);
+    background-image: url("images/trainStation.jpg");
+/* background-color: rgb(255, 190, 92); */
 }
 .jumbotron {
     height: 200px;
