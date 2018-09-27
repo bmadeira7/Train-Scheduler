@@ -36,8 +36,6 @@ database.ref().on("child_added", function (snapshot) {
     // Store this train in an easy to use, well-named variable
     var train = snapshot.val()
 
-
-
     // Change the HTML to reflect snapshot
     var newRow = $("<tr>")
     var nameCol = $("<td>").text(train.trainName)
@@ -48,13 +46,7 @@ database.ref().on("child_added", function (snapshot) {
 
     $(".tBody").append(newRow);
 
-
-
     var firstTimeConverted = moment(train.trainTime, "HH:mm").subtract(1, "years");
-
-
-    var currentTime = moment();
-
 
     var diffTime = moment().diff(moment(firstTimeConverted), "minutes");
 
@@ -65,8 +57,7 @@ database.ref().on("child_added", function (snapshot) {
     var timeTilNextTrain = train.frequency - timeRemainder;
 
 
-    var nextTrain = moment().add(timeTilNextTrain, "minutes");
-
+    var nextTrain = moment().add(timeTilNextTrain, "minutes").format("hh:mm a");
 
     var nextTrain2Table = $("<td>").text(nextTrain);
     var timeTilNextTrain2Table = $("<td>").text(timeTilNextTrain);
