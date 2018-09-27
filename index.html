@@ -9,9 +9,12 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="https://www.gstatic.com/firebasejs/5.5.1/firebase.js"></script>
 </head>
 
 <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.js"></script>
+    <audio id="trainMusic" src="assets/audio/Midnight train to Georgia.mp3" autoplay="false" loop="true"></audio>
 
     <div class="container">
         <div class="row">
@@ -19,8 +22,8 @@
 
                 <div class="jumbotron jumbotron-fluid text-light bg-dark">
                     <div class="container">
-                        <h1 class="display-4 jumbotronHeader">It's hard to stop a Train</h1>
-                        <p class="lead jumboP">We're always on the right track! ©</p>
+                        <h1 class="display-4 jumbotronHeader">It's hard to stop a train,</h1>
+                        <p class="lead jumboP">but we're always on the right track. ©</p>
                     </div>
                 </div>
 
@@ -30,61 +33,25 @@
         </div>
         <div class="row">
             <div class="col">
-                <div class="card">
+                <div class="card train-card">
                     <div class="card-header text-light bg-dark">
                         Current Train Schedule
                     </div>
                     <div class="card-body">
                         <table class="table table-hover">
-                            <tr>
-                                <th>Train Name</th>
-                                <th>Destination</th>
-                                <th>Frequency (min)</th>
-                                <th>Next Arrival</th>
-                                <th>Minutes Away</th>
-                            </tr>
-                            <tr>
-                                <td>#</td>
-                                <td>#</td>
-                                <td>#</td>
-                                <td>#</td>
-                                <td>#</td>
-                            </tr>
-                            <tr>
-                                <td>#</td>
-                                <td>#</td>
-                                <td>#</td>
-                                <td>#</td>
-                                <td>#</td>
-                            </tr>
-                            <tr>
-                                <td>#</td>
-                                <td>#</td>
-                                <td>#</td>
-                                <td>#</td>
-                                <td>#</td>
-                            </tr>
-                            <tr>
-                                <td>#</td>
-                                <td>#</td>
-                                <td>#</td>
-                                <td>#</td>
-                                <td>#</td>
-                            </tr>
-                            <tr>
-                                <td>#</td>
-                                <td>#</td>
-                                <td>#</td>
-                                <td>#</td>
-                                <td>#</td>
-                            </tr>
-                            <tr>
-                                <td>#</td>
-                                <td>#</td>
-                                <td>#</td>
-                                <td>#</td>
-                                <td>#</td>
-                            </tr>
+                            <thead>
+                                <tr>
+                                    <th>Train Name</th>
+                                    <th>Destination</th>
+                                    <th>Frequency (min)</th>
+                                    <th>Next Arrival</th>
+                                    <th>Minutes Away</th>
+                                </tr>
+                            </thead>
+
+                            <tbody class="tBody">
+
+                            </tbody>
                         </table>
 
 
@@ -102,22 +69,22 @@
                         <form>
                             <div class="form-group">
                                 <label for="formGroupExampleInput">Train Name</label>
-                                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+                                <input type="text" class="form-control" id="trainName" placeholder="">
                             </div>
                             <div class="form-group">
                                 <label for="formGroupExampleInput2">Destination</label>
-                                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="">
+                                <input type="text" class="form-control" id="destination" placeholder="">
                             </div>
                             <div class="form-group">
                                 <label for="formGroupExampleInput">First Train Time (HH:mm - military time)</label>
-                                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+                                <input type="text" class="form-control" id="trainTime" placeholder="">
                             </div>
                             <div class="form-group">
                                 <label for="formGroupExampleInput2">Frequency (min)</label>
-                                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="">
+                                <input type="text" class="form-control" id="frequency" placeholder="">
                             </div>
                         </form>
-                        <button type="submit" class="btn text-light bg-dark">Submit</button>
+                        <button type="submit" id="submitButton" class="btn text-light bg-dark">Submit</button>
                         </form>
                     </div>
                 </div>

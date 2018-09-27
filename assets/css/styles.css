@@ -1,9 +1,12 @@
 body {
-    background-image: url("images/trainStation.jpg");
+    background-image: url("../images/trainStation.jpg");
 /* background-color: rgb(255, 190, 92); */
 }
 .jumbotron {
     height: 200px;
+    opacity: .7;
+    border: 3px solid white;
+    border-radius: 5px;
 }
 .jumbotronHeader {
     text-align: center;
@@ -33,14 +36,21 @@ td, th {
     border: 1px solid #dddddd;
     text-align: left;
     padding: 8px;
+    opacity: .8;
 }
 
 tr:nth-child(even) {
     background-color: #dddddd;
+    
 }
 
 .addTrainCard {
     margin-top: 30px;
     margin-bottom: 30px;
     font-weight: 600;
+    opacity: .84;
+}
+.train-card {
+    opacity: .84;
+    
 }
